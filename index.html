@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&family=Mochiy+Pop+One&display=swap');
+  </style>
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>Bookshelf Apps</title>
+</head>
+<body>
+<header class="head_bar">
+  <img src="assets/image/library.png">
+  <h1 class="head_bar__title">Bookshelf Apps</h1>
+</header>
+<main>
+  <section class="input_section">
+    <h2>Masukkan Data Buku </h2>
+    <form id="inputBook">
+      <div class="input">
+        <label for="inputBookTitle">Judul</label>
+        <input id="inputBookTitle" type="text" required autocomplete="off" placeholder="Tulis judul lengkap buku">
+      </div>
+      <div class="input">
+        <label for="inputBookAuthor">Penulis</label>
+        <input id="inputBookAuthor" type="text" required autocomplete="off" placeholder="Tulis nama penulis">
+      </div>
+      <div class="input">
+        <label for="inputBookYear">Tahun Terbit</label>
+        <!-- <input id="inputBookYear" type="date" required> -->
+        <input id="inputBookYear" type="number" min="1900" max="2099" step="1" placeholder="Tulis tahun terbit buku"/>
+      </div>
+      <div class="input_inline">
+        <input id="inputBookIsComplete" type="checkbox">
+        <label for="inputBookIsComplete">Tandai Selesai Dibaca</label>
+      </div>
+      <div class="buttonSubmit">
+        <button id="buttonSubmit" type="submit">Masukkan Buku ke Rak</span></button>
+      </div>
+    </form>
+  </section>
+  
+  <section class="search_section">
+    <h2>Cari Buku </h2>
+    <form id="searchBook">
+      <label for="searchBookTitle">Judul</label>
+      <input id="searchBookTitle" type="text" autocomplete="off">
+      <button id="searchSubmit" type="submit">Cari</button>
+    </form>
+  </section>
+  
+  <section class="book_shelf">
+    <h2>Belum Selesai Dibaca</h2>
+    
+    <div id="incompleteBookshelfList" class="book_list">
+     <article class="book_item">
+       <h3></h3>
+       <p></p>
+       <p></p>
+        <div class="action">
+         <button class="green">Selesai dibaca</button>
+         <button class="red">Hapus buku</button>
+       </div>
+     </article>
+    </div>
+  </section>
+  
+  <section class="book_shelf">
+    <h2>Selesai Dibaca</h2>
+    
+    <div id="completeBookshelfList" class="book_list">
+     <article class="book_item">
+       <h3></h3>
+       <p></p>
+       <p></p>
+       <div class="action">
+         <button class="green">Belum selesai di Baca</button>
+         <button class="red">Hapus buku</button>
+       </div>
+     </article>
+    </div>
+  </section>
+  <div class="confirmDialogModal" id="confirmDialogModal">
+    <dialog class="containerDialog">
+      <div class="contentDialog">
+        <p>Apakah Anda Yakin Ingin Menghapus Buku Ini Dari Rak?</p>
+        <form method="dialog">
+          <button id="yesButton">Ya</button>
+          <button id="noButton">Tidak</button>
+        </form>
+      </div>
+      
+    </dialog>
+  </div>
+  
+</main>
+
+<script src="main.js"></script>
+
+</body>
+</html>
