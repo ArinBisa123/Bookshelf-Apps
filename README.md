@@ -1,6 +1,6 @@
 # Submission: Tugas Akhir Membuat Website
 
-This repository was created to fulfill the graduation requirements for the learning class to create a web front end for beginners from Dicoding Indonesia.
+This repository was created to fulfill the requirements for passing the Front End Web Untuk Pemula learning class from Dicoding Indonesia.
 
 This application behaves like a bookshelf where users can enter book data into the shelves, move book data between shelves, and delete book data from the shelves.
 
